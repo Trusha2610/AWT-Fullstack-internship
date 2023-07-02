@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion</title>
+</head>
+<body>
+    <h2>Javascript Type Conversion Example</h2>
+    <p id="id1"></p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("id1").innerHTML=
+        Number("3.14") + "<br>"+
+        Number("Math,PI") + "<br>"+
+        Number("  ") + "<br>"+
+        Number("oo") + "<br>"+
+        Number("") + "<br>"+
+        (1+"5"+2) + "<br>" +
+        ("15"+2) + "<br>" +
+        (+5) + "<br>" +
+        ("5"+2) + "<br>" +
+        (5+"2") + "<br>" +
+        (5+2) + "<br>" +
+        ("5"+ "2") + "<br>" +
+        ("5"- 2) + "<br>" +
+        (5- "2") + "<br>" +
+        (5- 2) + "<br>" +
+        ("5"- "2") + "<br>";
+
+
+        let y = "5";
+        let x = + y;
+        let z = 10;
+        /*The unary + operator can be used to convert a variable to a number*/
+        document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x + "<br>" + typeof z;
+
+        
+    </script>
+</body>
+</html>

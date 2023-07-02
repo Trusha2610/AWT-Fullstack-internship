@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <h2>JavaScript For Loop</h2>
+    <h2>Chocolate</h2>
+
+<p id="demo"></p>
+
+<script>
+const chocolate = ["Dairy milk", "Kit kat", "5 star", "Munch", "Perk"];
+
+let text = "";
+for (let i = 0; i < chocolate.length; i++) {
+  text += chocolate[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+    
+</body>
+</html>

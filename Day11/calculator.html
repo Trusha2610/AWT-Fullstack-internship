@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Function Calctulator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        button{    
+            color: rgb(0, 0, 0);
+        }
+        div{
+            width: 300px;
+            border: 5px solid rgb(11, 12, 11);
+            padding: 50px;
+            margin:auto;
+            background-image: linear-gradient(rgba(6, 93, 99, 0.647),#8dd7d980);
+        }
+    </style>
+</head>
+<html>
+<body>
+<div>
+<h1>Calculator</h1>
+num1:
+<input type="number" id="num1">
+<br>
+num2:
+<input type="number" id="num2">
+<br>
+<button onclick="add()">Addition</button>
+<button onclick="subtract()">Subtraction</button>
+<button onclick="multiply()">Multiply</button>
+<button onclick="divide()">Divide</button><br>
+<button onclick="result()"><p id="result">result</p></button>
+</div>
+
+<script>
+function add() {
+  var num1 = parseFloat(document.getElementById("num1").value);
+  var num2 = parseFloat(document.getElementById("num2").value);
+  var sum = num1 + num2;
+  document.getElementById("result").innerHTML = "Result: " + sum;
+}
+
+function subtract() {
+  var num1 = parseFloat(document.getElementById("num1").value);
+  var num2 = parseFloat(document.getElementById("num2").value);
+  var difference = num1 - num2;
+  document.getElementById("result").innerHTML = "Result: " + difference;
+}
+
+function multiply() {
+  var num1 = parseFloat(document.getElementById("num1").value);
+  var num2 = parseFloat(document.getElementById("num2").value);
+  var product = num1 * num2;
+  document.getElementById("result").innerHTML = "Result: " + product;
+}
+
+function divide() {
+  var num1 = parseFloat(document.getElementById("num1").value);
+  var num2 = parseFloat(document.getElementById("num2").value);
+  if (num2 !== 0) {
+    var quotient = num1 / num2;
+    document.getElementById("result").innerHTML = "Result: " + quotient;
+  } else {
+    document.getElementById("result").innerHTML = "Cannot divide by zero!";
+  }
+}
+</script>
+
+</body>
+</html>
