@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Event Example</title>
+    <script>
+        <!--focus,blur method-->
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "blue")
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "red")
+            });
+        });
+        /*on method*/
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "blue");
+                },
+                mouseleave: function(){
+                    $(this).css("background-color", "grey"); 
+                },
+                click: function(){
+                    $(this).css("background-color", "yellow"); 
+                }
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <p>Focus,blue method</p><br>
+    Name: <input type="text" name="fullname"><br><br>
+    Enrolnment Number: <input type="text" name="Enrolnment Number">
+    <hr>
+    <p>On method</p>
+    <p>Click on these to change the color</p>
+    
+</body>
+</html>
