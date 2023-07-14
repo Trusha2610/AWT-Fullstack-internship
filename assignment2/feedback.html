@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Feedback Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+body{
+    background-color: black;
+}
+#panel {  
+  padding: 30px;
+  width: 500px;
+  text-align: center;
+  background-color: rgb(60, 60, 60);
+  border: solid 1px #323232;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0px 0px 20px 20px ;
+  
+}
+#flip{
+    font-weight: bold;
+    font-size: 30px;
+    color: aliceblue;
+    padding: 20px;
+  width: 500px;
+  text-align: center;
+  background-color: rgb(60, 60, 60);
+  border: solid 1px #323232;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+#panel {
+  padding: 30px;
+  width: 500px;
+  display: none;
+}
+
+</style>
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    .input-container {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    
+    .icon {
+      padding: 13px;
+      background: rgb(174, 211, 101);;
+      color: rgb(31, 31, 30);
+      min-width: 50px;
+      
+      border-radius: 12px 0px 0px 12px;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
+
+    body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rate {
+
+	width: 200px;
+	height: 200px;
+	outline: #323232;
+}
+.emoji {
+	font-size: 80px;
+	height: 150px;
+	line-height: 150px;
+}
+
+input {
+	cursor: ew-resize;
+}
+    
+    </style>
+</head>
+<body>
+ 
+<div id="flip">Feedback Form</div>
+<div id="panel">
+    <form id="feedbackForm">
+        <div class="input-container">
+            <i class="fa fa-user icon" style="font-size: 27px;"></i>
+            <input class="input-field" type="text" placeholder="Name" name="usrnm" style="border-radius: 0px 12px 12px 0px;">
+          </div>
+        <br>
+          <div class="input-container">
+            <i class="fa fa-envelope icon" style="font-size: 27px;"></i>
+            <input class="input-field" type="text" placeholder="Email" name="email" style="border-radius: 0px 12px 12px 0px;">
+          </div>
+    <br>
+        <textarea id="message" name="message" placeholder="Message" required style="border-radius: 12px; padding:50px 50% 30px 50px"></textarea><br><br>
+
+
+        
+       <center><div class="rate">
+        <p style="color: aliceblue; font-size: 25px;">Rate Us &#128512;</p>
+        <div class="emoji">😑</div>
+        <input type="range" min="0" max="4" step="1">
+    </div></center>
+    <script>
+    var emojis = ["😠", "😦", "😑", "😀", "😍"];
+
+$("input").mousemove(function () {
+	var i = $(this).val();
+	$(".emoji").html(emojis[i]);
+});
+</script>
+
+       <div class="container">
+        <button id="btn">
+            <p id="btnText" style="color: aliceblue;">Submit</p>
+            <div class="check-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+            </div>
+        </button>
+    </div>
+    <script type="text/javascript">
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+    
+        btn.onclick = () => {
+            btnText.innerHTML = "Thanks";
+            btn.classList.add("active");
+        };
+    </script>
+      </form>
+</div>
+
+
+
+</body>
+</html>
